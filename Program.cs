@@ -1,9 +1,9 @@
-﻿int[][] arr = { [2,3,4], [1,4,6] };
+﻿int[,] arr = { { 2, 3, 4 }, //Row 0
+               { 1, 4, 6 } }; //Row 1
 
-
-foreach (int[] row in arr)
+for(int row = 0;  row < arr.GetLength(0); row++)  
 {
-    foreach (int num in row)
-        Console.Write($"| {num} ");
+    for(int col = 0;  col < arr.GetLength(1); col++)
+        Console.Write($"| {arr[row, col]} ");
     Console.WriteLine("|");
 }
